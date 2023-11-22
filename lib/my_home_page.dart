@@ -13,7 +13,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  late WebViewController _webViewController;
 
   @override
   Widget build(BuildContext context) {
@@ -24,10 +23,9 @@ class _MyHomePageState extends State<MyHomePage> {
       body: WebView(
         initialUrl: 'https://www.daraz.lk',
         onWebViewCreated: (WebViewController webViewController) {
-          _webViewController = webViewController;
         },
         javascriptMode: JavascriptMode.unrestricted,
-      )
+      ),
     );
   }
 }
